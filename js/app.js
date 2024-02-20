@@ -1,7 +1,8 @@
 function comprar() {
+    // Obter as informações do tipo do ingresso e a quantidade
     let tipo = document.getElementById('tipo-ingresso');
     let qtd = parseInt(document.getElementById('qtd').value);
-
+    // Criar condicional para chamar as devidas funções
     if (tipo.value == 'pista') {
         comprarPista(qtd);
         }
@@ -14,7 +15,9 @@ function comprar() {
 }
 
 function comprarPista(qtd) {
+    // Encontrar o numero de ingressos da pista
     let qtdPista = parseInt(document.getElementById('qtd-pista').textContent);
+    // Decrecer valor total da pista da quantidade comprada
     if (qtd > qtdPista) {
         alert('Quantidade indisponível para tipo pista');
     } else {
